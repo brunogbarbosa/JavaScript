@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(52, 183, 206);
+}
+
+input {
+    width: 150px;
+    outline: none;
+}
+
+div.center {
+    justify-content: center;
+    display: flex;
+    gap: 0.3rem;    
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+div#res > h1, .resultado {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: white;
+}

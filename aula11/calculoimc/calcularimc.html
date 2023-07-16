@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Peso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <main>
+            <h1>Calculador de Peso</h1>
+            <div class="peso">
+                    <p>Digite seu Peso (KG) : </p><input type="number" name="txtpeso" id="txtpeso">
+                </div>
+                    <div class="altura">
+                        <p>Digite a sua altura (M) :</p><input type="number" name="txtalt" id="txtalt">
+                    </div>
+                        <button onclick="clicar()">Enviar</button>
+                    <div class="res">
+
+                    </div>
+    </main>
+
+    <script>
+        function clicar() {
+            var txtpeso = document.querySelector ('#txtpeso').value;
+            var txtalt = document.querySelector ('#txtalt').value;
+            var res = document.querySelector ('div.res');
+            var potencia = (txtalt ** txtalt).toFixed(2)
+            var imc = txtpeso / (txtalt * txtalt).toFixed(2)
+                res.innerHTML = `<p><strong>Seu IMC: ${imc}</strong> </p>`
+            if (imc < 17 ) {
+                res.innerHTML += '<p><strong>MUITO ABAIXO DO PESO!</strong></p>'
+            } else {
+                if ( imc >= 17 <= 18.5) {
+                    res.innerHTML += '<p><strong>Parábens, você está no peso ideal !</strong></p>'
+                }
+            }
+        }
+    </script>
+</body>
+</html>

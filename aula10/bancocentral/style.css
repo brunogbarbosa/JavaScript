@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'bebas';
+    src: url(fontes/BebasNeue-Regular.ttf) format('TrueType');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --fonte-padrão: 'bebas'
+}
+
+body {
+    background-color: rgb(4, 160, 160);
+}
+
+header {
+    background-image: radial-gradient(rgb(0, 183, 255),rgb(0, 0, 0));
+    text-align: center;
+}
+
+header h1 {
+    text-align: center;
+    color: white;
+    padding: 30px;
+    font-family: var(--fonte-padrão);
+    font-size: 3em;
+}
+
+main h2, h3 {
+    color: white;
+    padding: 10px;
+}
+
+main p {
+    color: white;
+    padding: 6px;
+}
+
+main {
+    background-image: radial-gradient(rgb(0, 183, 255),rgb(0, 0, 0));
+    text-align: center;
+    max-width: 800px;
+    min-width: 290px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+aside {
+    background-image:radial-gradient(rgb(0, 183, 255),rgb(0, 0, 0)) ;
+    margin-top: 30px;
+}
+
+aside h2 {
+    color:  white;
+    text-align: center;
+}

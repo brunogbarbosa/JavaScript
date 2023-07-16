@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de Transito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <script>
+        var idade = Number(window.prompt('Digite o ano atual (yyyy): '));
+        var nasc = Number(window.prompt('Digite sua data de nascimento: '));
+        var carteira = idade - nasc
+            document.write(`Idade: ${carteira} Anos ! <br/>`);
+        carteira >= 18 ? document.write(`APTO A TIRAR CARTEIRA !`):document.write(`NÃO APTO A TIRAR CARTEIRA !`);
+    </script>
+</body>
+</html>

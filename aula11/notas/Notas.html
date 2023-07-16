@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Anual</title>
+</head>
+<body>
+    <h1>Veja sua Média ANUAL</h1>
+        <p>Digite sua primeira nota:</p> 
+            <input type="number" name="txtn1" id="txtn1"> 
+            <br> <input type="button" value="Verificar" onclick="calcular()">
+            <div class="res">
+
+            </div>
+        <script>
+            function calcular() {
+                var txtn1 = window.document.querySelector ('input#txtn1');
+                var res = window.document.querySelector ('div.res');
+                var notas = Number(txtn1.value);
+                    if ( notas >= 100 ) {
+                        res.innerHTML = `<p><strong>APROVADO</strong></p>`
+                    } else {
+                        res.innerHTML = '<p><strong>REPROVADO</strong></p>'
+                    }
+            }
+        </script>
+</body>
+</html>

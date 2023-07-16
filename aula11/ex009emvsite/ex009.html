@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador</title>
+</head>
+<body>
+    <h1>Identificador de Estrangeiros</h1>
+        Digite o nome do país: <input type="text" name="origem" id="origem">
+        <button onclick="verificar()">Verificar</button>
+        <div id="res">
+
+        </div> 
+
+    <script>
+        function verificar() {
+            var origem = document.querySelector('input#origem');
+            var res = document.querySelector('div#res');
+            
+            var pais = (origem.value).toUpperCase(); //O .value pega o valor da variavel que voce colocou (Valor digitado pelo user)
+
+                if (pais != 'BRASIL') { //O ! é diferente ou seja caso o pais digitado seja Brasil vai dar else pq Brasil é igual a Brasil.  Porem caso o usuario escreva por exemplo frança vai dar true porque brasil e diferente de frança
+
+                    res.innerHTML = `Você nasceu no país <strong>${pais}</strong> e é <strong>ESTRANGEIRO</strong> !`
+                } else {
+                    res.innerHTML = `Você nasceu no país <strong>${pais}</strong> e é <strong>BRASILEIRO</strong> !`
+                }
+
+        }
+    </script>
+</body>
+</html>

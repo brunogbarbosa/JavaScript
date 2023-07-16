@@ -1,0 +1,18 @@
+<h1>Voce é estrangeiro?</h1> 
+    <p>Qual seu pais de origem?</p>
+    <input type="text" name="origem" id="origem">
+    <input type="button" value="verificar" onclick="verificar()" id="verificar">
+    <div id="res">Resultado:</div>
+    <script>
+        function verificar(){
+            var origem = document.querySelector('input#origem') //Adicionei um var
+            var res = document.querySelector('div#res') // adicionei outro var
+            var pais = (origem.value).toUpperCase() //O .value pega o valor da variavel que voce colocou (Valor digitado pelo user)
+            if (pais != 'BRASIL'){ //O ! é diferente ou seja caso o pais digitado seja Brasil vai dar else pq Brasil é igual a Brasil.  Porem caso o usuario escreva por exemplo frança vai dar true porque brasil e diferente de frança
+                res.innerHTML = `Voce naseceu no pais ${pais}! Voce é Estrangeiro`
+            }
+            else{
+                res.innerHTML = `<p>Voce naseceu no pais ${pais} é <strong> Voce é Brasileiro!</strong></p>`
+            }
+        }
+    </script>

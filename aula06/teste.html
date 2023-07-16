@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario</title>
+</head>
+<body>
+    
+
+    <script>
+        var sal = Number(window.prompt('Digite seu Salario: ' + sal));
+        document.write (`Você recebe ${sal.toFixed(2).replace('.', ',')} por mês`)
+        sal.toLocateString('pt-BR', {style: 'currency', currency: 'BRL'})
+    </script>
+</body>
+</html>
