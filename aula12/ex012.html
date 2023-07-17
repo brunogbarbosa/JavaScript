@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+    <style>
+        body {
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.384);
+        }
+
+        button {
+            padding: 15px;
+            background-color: rgba(0, 204, 255, 0.288);
+            color: white;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Horarios</h1>
+       <button onclick="verificar()">Verificar</button>
+        <div id="res"> 
+
+        </div>
+
+    <script>
+        function verificar() {  
+            var agora = new Date()
+            var horas = agora.getHours()
+            var minutos = agora.getUTCMinutes()
+            var res = document.querySelector('#res');
+             res.innerHTML = (`Agora são exatamente ${horas}:${minutos} Horas.`);
+                if (horas < 12) {
+                    res.innerHTML += ('<p><strong>Bom Dia!</strong></p>');
+                } else if (horas <= 18) {
+                    res.innerHTML += ('<p><strong>Boa Tarde! </strong></p>');
+                } else if (horas >= 18) {
+                    res.innerHTML += ('<p><strong>Boa Noite! </strong></p>');
+                }
+        }
+    </script>   
+</body>
+</html>

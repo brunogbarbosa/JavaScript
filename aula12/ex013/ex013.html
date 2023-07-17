@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias da Semana</title>
+</head>
+    <style>
+
+        @font-face {
+            font-family: 'bebas';
+            src: url(fontes/BebasNeue-Regular.ttf) format('TrueType');
+        }
+
+        body {
+            text-align: center;
+            background-color: beige;
+        }
+
+        h1 {
+            font-family: 'bebas', sans-serif;
+            font-weight: normal;
+        }
+        
+        button {
+            background-color: whitesmoke;
+            color: black;
+            font-weight: normal;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.411);
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 15px;
+            font-family: 'bebas', sans-serif;
+        }
+
+        p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+<body>
+    <h1>Dias da Semana</h1>
+        <button onclick="verificar()">VERIFIQUE QUE DIA É HOJE</button>
+        <div id="res">
+
+        </div>
+    <script>
+        function verificar() {
+            var agora = new Date();
+            var DiaSem = agora.getUTCDay()
+            var res = document.querySelector('#res')
+            switch(DiaSem) {
+                case 0:
+                    res.innerHTML = (`<p>Hoje é <strong>Domingo</strong></p>`)
+                    break
+                case 1: 
+                    res.innerHTML = (`<p>Hoje é <strong>Segunda-Feira</strong></p>`);
+                    break
+                case 2: 
+                    res.innerHTML = (`<p>Hoje é <strong>Terça-Feira</strong></p>`)
+                    break
+                case 3: 
+                    res.innerHTML = (`<p>Hoje é <strong>Quarta-Feira</strong></p>`)
+                    break
+                case 4:
+                    res.innerHTML = (`<p>Hoje é <strong>Quinta-Feira</strong></p>`)
+                    break
+                case 5: 
+                    res.innerHTML = (`<p>Hoje é <strong>Sexta-Feira</strong></p>`)
+                    break
+                case 6: 
+                    res.innerHTML = (`<p>Hoje é <strong>Sabado</strong></p>`)
+                    break
+                default:
+                    res.innerHTML = (`<p><strong>[ERROR]</strong> Dia Invalido!</p>`)
+            }
+        }
+    </script>
+</body>
+</html>
