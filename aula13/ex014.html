@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+ <html lang="pt-BR">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testanto While</title>
+ </head>
+ <body>
+    <h1>Teste com White/do</h1>
+        <button onclick="clicar()">Clique AQUI</button>
+        <div id="res">
+
+        </div>
+    <script>
+        function clicar() {
+            //var esc = prompt('Digite o que você quer escrever:').value;
+            var qnt = Number(prompt('Digite um valor: '));
+           // var esc = (esc.value + valor)
+            var valor = 1
+                while (valor <= qnt ) {
+                    document.write(` <br> ${qnt}`)
+                    valor++
+                }
+        }
+    </script>
+ </body>
+ </html>
