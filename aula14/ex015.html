@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetição</title>
+</head>
+<body>
+    <h1>Testado a Repetição "FOR"</h1>
+        <button onclick="clicar()">Clique Aqui!!</button>
+        <div id="res">
+
+        </div>
+
+    <script>
+        function clicar() {
+            var esc = prompt('Digite alguma coisa:');
+            var qnt = prompt('Digite a quantidade:');
+
+            var resultado = ""
+            for (var contador = 1; contador <= qnt; contador++) {
+                resultado += `<br>${esc}`
+            }
+            var res = document.querySelector('#res');
+                res.innerHTML = `${resultado}`
+        }
+    </script>
+</body>
+</html>
