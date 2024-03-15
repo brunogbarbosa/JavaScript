@@ -1,15 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 04</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Quantity Selector</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
-    <h1>teste</h1>
-        <p>teste2</p>
+
+<div class="product-form_info-item product-form_info-item--quantity">
+  <label for="product-template-8220993880323-quantity" class="product-form__info-title text--strong">Quantidade:</label>
+  <div class="product-form__info-content">
+    <div id="myform2" class="qty-align">
+      <input type="button" value="-" class="qtyminus" field="quantity">
+      <input name="quantity" value="1" class="qty" disabled>
+      <input type="button" value="+" class="qtyplus" field="quantity">
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    // Event listener for the decrement button
+    $('.qtyminus').on('click', function () {
+      updateQuantity($(this), -1);
+    });
+
+    // Event listener for the increment button
+    $('.qtyplus').on('click', function () {
+      updateQuantity($(this), 1);
+    });
+
+    // Function to handle the quantity change
+    function updateQuantity(btn, change) {
+      var quantityInput = btn.siblings('.qty');
+      var currentVal = parseInt(quantityInput.val()) || 0; // Default to 0 if not a valid number
+      var newValue = currentVal + change;
+
+      if (newValue >= 0) {
+        quantityInput.val(newValue);
+      }
+    }
+  });
+</script>
+
 </body>
-    <script>
-        window.prompt ('olá mundo');
-    </script>
 </html>
