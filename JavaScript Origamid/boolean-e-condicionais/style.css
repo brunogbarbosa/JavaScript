@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+button {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: auto;
+    width: 50px;
+}

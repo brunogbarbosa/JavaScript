@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(132, 209, 209);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.botaolight, .botaoblack {
+    padding: 10px;    
+}
+
+.botaoblack {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.botaolight {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
